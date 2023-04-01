@@ -32,7 +32,7 @@ async def on_ready():
     embed = nextcord.Embed(title=titre_embed, description=desc_embed, color=0xFF00FF)
     embed.add_field(name=sous_titre1, value=desc_titre1)
     await bot.get_channel(channel_cible).send(embed=embed)      #type: ignore
-    print("En ligne")
+    print("Embed envoyé !")
 
 
 
