@@ -1,4 +1,5 @@
 import os
+import time
 import nextcord
 from nextcord.ext import commands
 # from nextcord.utils import get
@@ -15,15 +16,18 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-message = "Coucou"
+message = "Yo je suis All-In-One !"
 # channel_cible = int(input("Quelle est le channel cible : "))
 channel_cible = 1091449953047543852
 
 
 @bot.event
 async def on_ready():
+    print("Envoi en cours...")
     await bot.get_channel(channel_cible).send(message)
-    print("En ligne")
+    print("Message envoyé !")
+    time.sleep(2)
+    await bot.close()
 
 
 

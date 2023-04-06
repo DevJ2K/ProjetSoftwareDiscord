@@ -1,13 +1,13 @@
 $("#my-button").click(function() {
-    const param1 = $("#param1").val();
-    const param2 = $("#param2").val();
+    const channel_cible = $("#channel_cible").val();
+    const message = $("#message").val();
 
     $.ajax({
-        url: '/execute_function',
+        url: '/download_custom_message',
         type: 'POST',
         data: {
-            param1: param1,
-            param2: param2
+            param1: channel_cible,
+            param2: message
         },
         success: function(response) {
             $("#result-container").html(response.result);

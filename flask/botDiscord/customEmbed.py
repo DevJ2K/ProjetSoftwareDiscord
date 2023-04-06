@@ -30,11 +30,15 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 @bot.event
 async def on_ready():
     print("Bot en ligne !")
+    # await sendEmbed(1, "", "", "", "")
 
 async def sendEmbed(channel_cible, titre_embed, desc_embed, sous_titre, desc_titre):
     embed = nextcord.Embed(title=titre_embed, description=desc_embed, color=0xFF00FF)
     embed.add_field(name=sous_titre, value=desc_titre)
     await bot.get_channel(channel_cible).send(embed=embed)      #type: ignore
 
+    await bot.close()
+
 # bot.run(os.getenv("TOKEN"))
 bot.run(TOKEN)
+
