@@ -212,3 +212,54 @@ nav{
   border-radius: 20px;
   display: none;
 }
+/* ---------------- */
+
+#db .neumorphic-form {
+  background-color: var(--gris-clair-1);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
+  width: 400px;
+  max-width: 100%;
+}
+
+#db .input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+input, textarea {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: inset 8px 8px 16px #d1d1d1, inset -8px -8px 16px #ffffff;
+  outline: none;
+  margin-top: 0.5rem;
+}
+
+textarea {
+  resize: none;
+}
+
+#db .neumorphic-btn {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  transition: 0.2s;
+}
+
+#db .neumorphic-btn:hover {
+  box-shadow: inset 8px 8px 16px #d1d1d1, inset -8px -8px 16px #ffffff;
+}
+
+#db .neumorphic-btn:active {
+  box-shadow: none;
+  background-color: #d1d1d1;
+}
