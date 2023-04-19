@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../static/style.css">
+    <script src="script.js"></script> -->
     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
     <script src="{{ url_for('static', filename= 'js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename= 'js/flask.js') }}"></script>
     <title>Accueil</title>
 </head>
 <body>
@@ -42,26 +45,104 @@
     </nav>
         
         
-        <div id="accueil"></div>
-        <div id="bots"></div>
-        <div id="db">
+        <div id="accueil">
+        <div class="container-bis">
 
-            <form class="neumorphic-form">
-                <h2>Envoyer un message</h2>
-                <div class="input-group">
-                    <label for="channel">Channel cible :</label>
-                    <input type="text" id="channel" name="channel" placeholder="Entrez le nom du channel" required>
-                </div>
-                <div class="input-group">
-                    <label for="message">Message à envoyer :</label>
-                    <textarea id="message" name="message" rows="4" cols="50" placeholder="Entrez votre message" required></textarea>
-                </div>
-                <button type="submit" class="neumorphic-btn" onclick="sendMessage()">Envoyer</button>
-            </form>
-
+          <ul class="timeline">
+            <li>
+              <h3>1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </li>
+            <li>
+              <h3>2</h3>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </li>
+            <li>
+              <h3>3</h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </li>
+            <li>
+              <h3>4</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </li>
+            <li>
+              <h3>5</h3>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </li>
+            <li>
+              <h3>6</h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </li>
+            <li>
+              <h3>7</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </li>
+            <li>
+              <h3>8</h3>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </li>
+            <li>
+              <h3>9</h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </li>
+            <li>
+              <h3>10</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </li>
+          </ul>
         </div>
+  
+        </div>
+        <div id="bots">
+          <div class="container-wrapper">
+            <div class="b1-container">
+              <!-- contenu du premier container -->
+              <center>
+              <h1>LISTE DES BOTS</h1>
+            </center>
+            <ul>
+              <span class="span-1" onclick="afficher4(), cacher5(), cacher6(), cacher7(), cacher8()";><img src="" alt="avatar-bot"><li><h3>Envoi de message personnalisé</h3></li></span>
+              <span class="span-2" onclick="afficher5(), cacher4(), cacher6(), cacher7(), cacher8()";><img src="" alt="avatar-bot"><li><h3>Envoi d'embed personnalisé</h3></li></span>
+              <span class="span-3" onclick="afficher6(), cacher4(), cacher5(), cacher7(), cacher8()";><img src="" alt="avatar-bot"><li><h3>Modération</h3></li></span>
+              <span class="span-4" onclick="afficher7(), cacher4(), cacher5(), cacher6(), cacher8()";><img src="" alt="avatar-bot"><li><h3>-------BOT4-------</h3></li></span>
+              <span class="span-5" onclick="afficher8(),  cacher4(), cacher5(), cacher6(), cacher7()";><img src="" alt="avatar-bot"><li><h3>-------BOT5-------</h3></li></span>
+            </ul>
+            </div>
+            <div class="b2-container">
+              <!-- contenu du deuxième container -->
+              <center>
+                <h1>NOM DU BOT CHOISI</h1>
+              </center>
+              <center>
+              <div class="bot-parametres">
+                <div id="bot-1">
+                  <input type="text" id="message" placeholder="Entrez votre message ici">
+                  <button onclick="sendMessage()">Envoyer le message</button>
+                </div>
+
+                <div id="bot-2">
+                  <input type="text" id="channel" placeholder="Entrez le channel ici">
+                  <input type="text" id="titre" placeholder="Entrez le titre ici">
+                  <input type="text" id="description" placeholder="Entrez votre description ici">
+                  <input type="text" id="fieldName" placeholder="Entrez votre fieldName ici">
+                  <input type="text" id="fieldValue" placeholder="Entrez votre fieldValue ici">
+          
+                  <button onclick="sendEmbed()">Envoyer l'embed</button>
+           
+                </div>
+                <div id="bot-3"></div>
+                <div id="bot-4"></div>
+                <div id="bot-5"></div>
+              </div>
+            </center>
+            </div>
+          </div>
+        </div>
+        <div id="db"></div>
 
     </div>
 </body>
+<!-- <script src="darkmode.js"></script> -->
 <script src="{{ url_for('static', filename= 'js/darkmode.js') }}"></script>
+<!-- <script src="main.js"></script> -->
 </html>

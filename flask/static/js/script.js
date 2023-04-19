@@ -1,3 +1,4 @@
+//NAVIGATION
 function afficher() {
     var a = document.getElementById("accueil").style.display = "block"
 }
@@ -11,24 +12,40 @@ function cacher2() {
     var b = document.getElementById("bots").style.display = "none"
 }
 function afficher3() {
-    var d = document.getElementById("db").style.display = "block"
+    var c = document.getElementById("db").style.display = "block"
 }
 function cacher3() {
-    var d = document.getElementById("db").style.display = "none"
+    var c = document.getElementById("db").style.display = "none"
 }
 
-async function sendMessage() {
-    const message = document.getElementById('message').value;
-    const channel = document.getElementById('channel').value;
-    const response = await fetch('/send_message', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 'message': message, 'channel': channel }),
-    });
-
-    if (response.ok) {
-        alert('Message envoyé');
-    } else {
-        alert('Erreur lors de l\'envoi du message');
-    }
+//CHOIX DES BOTS
+function afficher4() {
+    var d = document.getElementById("bot-1").style.display = "block"
+}
+function cacher4() {
+    var d = document.getElementById("bot-1").style.display = "none"
+}
+function afficher5() {
+    var e = document.getElementById("bot-2").style.display = "block"
+}
+function cacher5() {
+    var e = document.getElementById("bot-2").style.display = "none"
+}
+function afficher6() {
+    var e = document.getElementById("bot-3").style.display = "block"
+}
+function cacher6() {
+    var e = document.getElementById("bot-3").style.display = "none"
+}
+function afficher7() {
+    var e = document.getElementById("bot-4").style.display = "block"
+}
+function cacher7() {
+    var e = document.getElementById("bot-4").style.display = "none"
+}
+function afficher8() {
+    var e = document.getElementById("bot-5").style.display = "block"
+}
+function cacher8() {
+    var e = document.getElementById("bot-5").style.display = "none"
 }
